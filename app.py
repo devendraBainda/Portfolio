@@ -1,14 +1,14 @@
 from flask import Flask, request, jsonify, send_from_directory
 import google.generativeai as genai
 import os
-from flask_cors import CORS  # Import CORS
+from flask_cors import CORS  
 from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
 
 app = Flask(__name__, static_folder=".")
-CORS(app)  # Enable CORS for all routes
+CORS(app)  
 
 # Load Gemini API Key securely from environment variable
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -17,7 +17,7 @@ if not GEMINI_API_KEY:
 
 genai.configure(api_key=GEMINI_API_KEY)
 
-# Load the model (Gemini Pro or any available)
+# Load the model 
 model = genai.GenerativeModel("gemini-2.0-pro-exp")
 
 def generate_prompt(user_question):

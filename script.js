@@ -68,8 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email").value
       const message = document.getElementById("message").value
 
-      // Here you would typically send the form data to a server
-      // For this example, we'll just show a success message
       alert(`Thank you, ${name}! Your message has been sent successfully.`)
 
       // Reset the form
@@ -83,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resumeDownloadBtn.addEventListener("click", (e) => {
       e.preventDefault()
 
-      // In a real application, this would be a link to your actual resume file
+      //  a link to your actual resume file
       alert("Your resume download would start now. Replace this with a real download link in production.")
     })
   }

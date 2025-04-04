@@ -1,4 +1,3 @@
-// chatbot.js
 document.addEventListener('DOMContentLoaded', function() {
     // Chat elements
     const chatbotToggle = document.getElementById('chatbot-toggle');
@@ -145,8 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function initChatbot() {
         // Show initial message
         setTimeout(() => {
-            // Initial message is already in the HTML
-            
             // Show suggestions after initial greeting
             addSuggestionButtons();
         }, 500);
