@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, send_from_directory
 import google.generativeai as genai
 import os
+import smtplib
+from email.mime.text import MIMEText
 from flask_cors import CORS  
 from dotenv import load_dotenv
 
@@ -72,6 +74,41 @@ def chatbot():
     except Exception as e:
         print(f"Error generating response: {str(e)}")
         return jsonify({"error": str(e), "response": "Sorry, I'm having trouble connecting right now. Please try again later."}), 500
+
+@app.route("/contact", methods=["POST"])
+def contact():
+    data = request.get_json()
+    name = data.get("name")
+    email = data.get("email")
+    message = data.get("message")
+
+    if not name or not email or not message:
+        return jsonify({"message": "Missing fields"}), 400
+
+    try:
+        sender_email = os.getenv("SENDER_EMAIL")
+        sender_password = os.getenv("SENDER_PASSWORD")
+        receiver_email = os.getenv("RECEIVER_EMAIL", sender_email)
+
+        if not sender_email or not sender_password:
+            return jsonify({"message": "Email credentials not set in environment"}), 500
+
+        email_content = f"New message from {name} ({email}):\n\n{message}"
+
+        msg = MIMEText(email_content)
+        msg["Subject"] = f"New message from {name}"
+        msg["From"] = email
+        msg["To"] = receiver_email
+
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(sender_email, sender_password)
+            smtp.send_message(msg)
+
+        return jsonify({"message": "Message sent successfully!"}), 200
+
+    except Exception as e:
+        print(f"Email sending error: {e}")
+        return jsonify({"message": "Failed to send message."}), 500
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
