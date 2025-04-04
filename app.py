@@ -97,7 +97,7 @@ def contact():
 
         msg = MIMEText(email_content)
         msg["Subject"] = f"New message from {name}"
-        msg["From"] = email
+        msg["From"] = sender_email
         msg["To"] = receiver_email
 
         with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
