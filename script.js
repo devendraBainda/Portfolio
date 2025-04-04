@@ -37,43 +37,46 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Animate skill bars on scroll
-  const skillBars = document.querySelectorAll(".skill-level")
-
-  function animateSkillBars() {
-    skillBars.forEach((bar) => {
-      const barPosition = bar.getBoundingClientRect().top
-      const screenPosition = window.innerHeight / 1.3
-
-      if (barPosition < screenPosition) {
-        bar.style.width = bar.parentElement.previousElementSibling.lastElementChild.textContent
-      }
-    })
-  }
-
   // Initial check for elements in view
   animateSkillBars()
 
   // Check on scroll
   window.addEventListener("scroll", animateSkillBars)
 
-  // Form submission handling
-  const contactForm = document.getElementById("contact-form")
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
+ // Form submission handling
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-      // Get form values
-      const name = document.getElementById("name").value
-      const email = document.getElementById("email").value
-      const message = document.getElementById("message").value
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-      alert(`Thank you, ${name}! Your message has been sent successfully.`)
+    try {
+      const response = await fetch("/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
 
-      // Reset the form
-      contactForm.reset()
-    })
-  }
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(`Thank you, ${name}! Your message has been sent successfully.`);
+        contactForm.reset();
+      } else {
+        alert("Oops! Something went wrong: " + result.message);
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to send message. Please try again later.");
+    }
+  });
+}
 
   // Resume download button
   const resumeDownloadBtn = document.getElementById("resume-download")
@@ -81,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resumeDownloadBtn.addEventListener("click", (e) => {
       e.preventDefault()
 
-      //  a link to your actual resume file
+      //  a link to resume file
       alert("Your resume download would start now. Replace this with a real download link in production.")
     })
   }
@@ -146,4 +149,3 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", animateProjectCards)
   }
 })
-
