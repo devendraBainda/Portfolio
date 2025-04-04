@@ -1,0 +1,18 @@
+.env
+proj
+venv
+.venv
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables
+.env
+
+# VSCode or other IDE settings (optional)
+.vscode/
+.idea/
+
+# macOS/Windows system files (optional)
+.DS_Store
+Thumbs.db
