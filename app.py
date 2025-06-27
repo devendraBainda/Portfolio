@@ -20,7 +20,7 @@ if not GEMINI_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Load the model 
-model = genai.GenerativeModel("gemini-2.0-pro-exp")
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 def generate_prompt(user_question):
     resume_info = """
