@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Devendra Bainda - ML & AI Engineer | IIT Roorkee Student</title>
+    <meta name="description" content="Devendra Bainda - Machine Learning & AI Engineer from IIT Roorkee. Specializing in Machine Learning, Neural Networks, and AI solutions.">
+    <meta name="keywords" content="Machine Learning, AI Engineer, Python, Neural Networks, LLMs, IIT Roorkee, Devendra Bainda">
+    <meta name="author" content="Devendra Bainda">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1 class="logo">ML Dev</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Machine Learning<br>
+                        <span class="hero-title-white">Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Crafting intelligent solutions with Python, and cutting-edge ML<br>
+                        algorithms. Transforming data into insights and ideas into reality.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/devendraBainda" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/devendra-bainda-57b3a1358/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:devendrabainda192@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Scroll down indicator -->
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <p>I'm an Electrical Engineering student at <strong>IIT Roorkee</strong> with a passion for Machine Learning and Artificial Intelligence. I specialize in developing innovative AI solutions, from voice-enabled assistants to computer vision systems and predictive models.</p>
+                        <p>My technical expertise includes supervised and unsupervised learning, neural networks, RAG and large language models with proficiency in Python and modern ML frameworks.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                
+                            </div>
+                            <div class="stat">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='image.jpg') }}" alt="Devendra Bainda" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <!-- Machine Learning -->
+                    <div class="skill-category">
+                        <div class="skill-icon ml">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">NumPy</span>
+                            <span class="tag">Keras</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skill-category">
+                        <div class="skill-icon web">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Flask</span>
+                           
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="skill-category">
+                        <div class="skill-icon programming">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">C++</span>
+                        </div>
+                    </div>
+
+                    <!-- Data & Analytics -->
+                    <div class="skill-category">
+                        <div class="skill-icon data">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Data & Analytics</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">Statistical Analysis</span>
+                            <span class="tag">ETL</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-category">
+                        <div class="skill-icon database">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span class="tag">SQLite</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Deployment -->
+                    <div class="skill-category">
+                        <div class="skill-icon deployment">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Deployment</h3>
+                        <div class="skill-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">GCP</span>
+                            <span class="tag">Heroku</span>
+                            <span class="tag">Nginx</span>
+                            <span class="tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card ">
+                        <div class="project-icon icon-1">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Hinglish Cold Calling AI Agent</h3>
+                            <p>Engineered a multilingual, voice-enabled AI assistant for automated business calls in Hinglish using ASR, TTS, and LLM-based dialogue management. Automated ERP demo scheduling, candidate screening, and payment/order follow-ups with contextual intent recognition and response generation.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">AI</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Speech Recognition</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/devendraBainda/hinglish-cold-calling-agent.git" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-icon icon-2">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Object Motion Tracking System</h3>
+                            <p>Advanced computer vision system using YOLOv11n detection and Kalman filtering for accurate object motion prediction and tracking, even during visual obstructions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Computer Vision</span>
+                                <span class="tech-tag">YOLO</span>
+                                <span class="tech-tag">Kalman Filter</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/devendraBainda/Credit-Card-Default-Prediction.git" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                    
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-icon icon-3">
+                            <i class="fas fa-plane"></i>                            
+                        </div>
+                        <div class="project-content">
+                            <h3>Flight Delay Analysis</h3>
+                            <p>This comprehensive analysis tackles one of aviation's most persistent challenges: flight delays. Using advanced machine learning techniques and explainable AI, this project provides actionable insights to help airlines reduce operational disruptions and improve passenger experience.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">OLLAMA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/devendraBainda/flight-delay-analysis.git" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-icon icon-4">
+                            <i class="fas fa-robot"></i>                            
+                        </div>
+                        <div class="project-content">
+                            <h3>AI Interview Agent</h3>
+                            <p>An AI-powered web app that analyzes resumes, generates personalized questions, and conducts voice-enabled interviews with real-time answer evaluation and feedback using OpenAI, Gemini, or local LLMs. Built with Flask, Whisper, and modern web tech for a seamless candidate experience.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">LLMs</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">OLLAMA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/devendraBainda/AI-Interview_Agent.git" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-icon icon-5">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Credit Card Default Prediction</h3>
+                            <p>Built a machine learning model to predict credit card defaults using behavioral and financial data from 30,000+ users. Applied feature engineering, SMOTE for class imbalance, and evaluated models like XGBoost and LightGBM to enable early risk detection with high recall and F2-score.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Jupyter Notebook</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            
+                            </div>
+                        </div>
+                    </div>
+                       <!-- Project 6 -->
+                        <div class="project-card">
+                        <div class="project-icon icon-6">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Emotion_classifier_app</h3>
+                            <p>An end-to-end deep learning pipeline for emotion classification using speech data. Includes audio preprocessing, data augmentation, CNN model training, and a Streamlit web app for real-time emotion detection from audio files.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CNNs</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/devendraBainda/Emotion_classifier_app.git" class="project-link">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                                <a href="https://emotionclassifierappgit-44bprfoucdqtdfwxrg44dx.streamlit.app/" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h3>Student & ML Researcher</h3>
+                                    <div class="company">IIT Roorkee</div>
+                                    <div class="duration">2022 - Present</div>
+                                </div>
+                                <div class="experience-description">
+                                    <p>Pursuing B-Tech in Electrical Engineering while developing cutting-edge ML solutions and projects.</p>
+                                    <ul>
+                                        <li>Developed 6+ machine learning projects with real-world applications</li>
+                                        <li>Specialized in AI solutions including voice assistants and computer vision systems</li>
+                                        <li>Contributed to open-source projects and participated in hackathons</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="experience-card">
+                                <div class="experience-header">
+                                    <h3>Machine Learning Intern</h3>
+                                    <div class="company">MockBoard EduTech Pvt Ltd</div>
+                                    <div class="duration">April 2025 - May 2025</div>
+                                </div>
+                                <div class="experience-description">
+                                    <p> Built and optimized a Retrieval-Augmented Generation (RAG) pipeline combining vector search with LLMs for personalized learning content delivery and contextual question answering.</p>
+                                    <ul>
+                                        <li>Designed and implemented a RAG system using Ollama and Langchain</li>
+                                        <li>Integrated vector databases for efficient information retrieval</li>
+                                        <li>Enhanced user experience with personalized content recommendations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Work Together</h2>
+                        <p>I'm always open to discussing new projects, job opportunities, or collaborations. Feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:devendrabainda192@gmail.com" class="contact-method">
+                                <div class="contact-icon email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>devendrabainda192@gmail.com</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://www.linkedin.com/in/devendra-bainda-57b3a1358/" target="_blank" class="contact-method">
+                                <div class="contact-icon linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <p>Connect with me</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/devendraBainda" target="_blank" class="contact-method">
+                                <div class="contact-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <p>View my repositories</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Devendra Bainda. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbot-toggle" aria-label="Open AI assistant">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbot-box" id="chatbot-box">
+            <div class="chatbot-header">
+                <h3>AI Assistant</h3>
+                <button class="close-btn" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="chat-message bot">
+                    <div class="message-content">
+                        Hi! I'm Devendra's AI assistant. How can I help you learn more about his skills and projects?
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Ask me anything...">
+                <button id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>
