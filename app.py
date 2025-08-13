@@ -218,7 +218,4 @@ def contact():
 if __name__ == "__main__":
     # Local run only
     app.run(host="0.0.0.0", port=5000)
-    if initialize_rag():
-        logger.info("RAG system initialized successfully")
-    else:
-        logger.error("Failed to initialize RAG system")
+    
